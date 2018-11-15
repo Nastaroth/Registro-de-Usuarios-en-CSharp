@@ -26,7 +26,6 @@ C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\bin\De
 C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\bin\Debug\Practica_Telefonos.exe
 C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\bin\Debug\Practica_Telefonos.pdb
 C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.csprojResolveAssemblyReference.cache
-C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.Buscar.resources
 C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.Informes.resources
 C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.Login.resources
 C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.Principal.resources
