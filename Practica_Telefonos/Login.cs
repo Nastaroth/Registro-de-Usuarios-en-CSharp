@@ -95,6 +95,15 @@ namespace Practica_Telefonos
                     reg2.ShowDialog();
                 }
 
+                private void limpiarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+                {
+                    txtNombre.Text = "";
+                    txtContraseña.Text = "";
+                   
+                }
+
+              
+
         }
     }
 

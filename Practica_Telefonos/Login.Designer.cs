@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -41,7 +42,10 @@
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cntxtmeLimpiarDatos = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.limpiarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.cntxtmeLimpiarDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -66,6 +70,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.ContextMenuStrip = this.cntxtmeLimpiarDatos;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(151, 140);
             this.txtNombre.Multiline = true;
@@ -173,12 +178,27 @@
             this.salirToolStripMenuItem1.ToolTipText = "Quitar la aplicacion";
             this.salirToolStripMenuItem1.Click += new System.EventHandler(this.salirToolStripMenuItem1_Click);
             // 
+            // cntxtmeLimpiarDatos
+            // 
+            this.cntxtmeLimpiarDatos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.limpiarDatosToolStripMenuItem});
+            this.cntxtmeLimpiarDatos.Name = "cntxtmeLimpiarDatos";
+            this.cntxtmeLimpiarDatos.Size = new System.Drawing.Size(148, 26);
+            // 
+            // limpiarDatosToolStripMenuItem
+            // 
+            this.limpiarDatosToolStripMenuItem.Name = "limpiarDatosToolStripMenuItem";
+            this.limpiarDatosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.limpiarDatosToolStripMenuItem.Text = "Limpiar Datos";
+            this.limpiarDatosToolStripMenuItem.Click += new System.EventHandler(this.limpiarDatosToolStripMenuItem_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(490, 362);
+            this.ContextMenuStrip = this.cntxtmeLimpiarDatos;
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtContraseña);
@@ -194,6 +214,7 @@
             this.Load += new System.EventHandler(this.Login_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.cntxtmeLimpiarDatos.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,6 +235,8 @@
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip cntxtmeLimpiarDatos;
+        private System.Windows.Forms.ToolStripMenuItem limpiarDatosToolStripMenuItem;
     }
 }
 
