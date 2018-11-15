@@ -18,3 +18,23 @@ C:\Users\Nastaroht\documents\visual studio 2013\Projects\Practica_Telefonos\Prac
 C:\Users\Nastaroht\documents\visual studio 2013\Projects\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.Informes.resources
 C:\Users\Nastaroht\documents\visual studio 2013\Projects\Practica_Telefonos\Practica_Telefonos\obj\Debug\RdlCompile.cache
 C:\Users\Nastaroht\documents\visual studio 2013\Projects\Practica_Telefonos\Practica_Telefonos\obj\Debug\RdlCompile.compiled
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\bin\Debug\Practica_Telefonos.exe.config
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.exe
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.pdb
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\bin\Debug\Practica_Telefonos.exe.manifest
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\bin\Debug\Practica_Telefonos.application
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\bin\Debug\Practica_Telefonos.exe
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\bin\Debug\Practica_Telefonos.pdb
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.csprojResolveAssemblyReference.cache
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.Buscar.resources
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.Informes.resources
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.Login.resources
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.Principal.resources
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.Properties.Resources.resources
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.Registrarse.resources
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.csproj.GenerateResource.Cache
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\RdlCompile.cache
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\RdlCompile.compiled
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.TrustInfo.xml
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.exe.manifest
+C:\Users\Nastaroht\Documents\Github\Practica_Telefonos\Practica_Telefonos\obj\Debug\Practica_Telefonos.application

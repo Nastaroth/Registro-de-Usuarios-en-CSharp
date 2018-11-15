@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Practica_Telefonos.exe" size="402944">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Practica_Telefonos.exe" size="404992">
       <assemblyIdentity name="Practica_Telefonos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>llzojEJRAC6pZ9bBiuqWzjFjHJvSSlInscfJrdbXl1E=</dsig:DigestValue>
+        <dsig:DigestValue>t+WMo7W05U1x6RI7p3oHWFhyE2pNYI+5of5jCMwVkd4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

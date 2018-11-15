@@ -77,6 +77,24 @@ namespace Practica_Telefonos
 
                 }
 
+                private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
+                {
+                    this.Close();
+                }
+
+                private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+                {
+                    MessageBox.Show("Por favor comuniquese con el administrador del sistema a traves del 0000000");
+
+                }
+
+                private void registroDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+                {
+                    Registrarse reg2 = new Registrarse();
+
+                    reg2.ShowDialog();
+                }
+
         }
     }
 
