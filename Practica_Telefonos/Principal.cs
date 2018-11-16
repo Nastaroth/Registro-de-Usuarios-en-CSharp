@@ -28,7 +28,12 @@ namespace Practica_Telefonos
         
                 private void btnCancelar_Click(object sender, EventArgs e)
                 {
+
+                   Login lg = new Login();
+                    this.Hide();
+                    lg.ShowDialog();
                     this.Close();
+                    
                 }
 
             
