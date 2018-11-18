@@ -46,7 +46,9 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.BtnClientes = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dataSetClientes1 = new Practica_Telefonos.DataSetClientes();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetClientes1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -214,6 +216,11 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // dataSetClientes1
+            // 
+            this.dataSetClientes1.DataSetName = "DataSetClientes";
+            this.dataSetClientes1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +247,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetClientes1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +272,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button BtnClientes;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private DataSetClientes dataSetClientes1;
     }
 }

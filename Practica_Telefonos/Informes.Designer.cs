@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSetClientes = new Practica_Telefonos.DataSetClientes();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSetClientes = new Practica_Telefonos.DataSetClientes();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.clientesTableAdapter = new Practica_Telefonos.DataSetClientesTableAdapters.clientesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetClientes)).BeginInit();
             this.SuspendLayout();
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "clientes";
+            this.clientesBindingSource.DataSource = this.DataSetClientes;
+            // 
+            // DataSetClientes
+            // 
+            this.DataSetClientes.DataSetName = "DataSetClientes";
+            this.DataSetClientes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -49,16 +59,6 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(677, 301);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // DataSetClientes
-            // 
-            this.DataSetClientes.DataSetName = "DataSetClientes";
-            this.DataSetClientes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "clientes";
-            this.clientesBindingSource.DataSource = this.DataSetClientes;
             // 
             // clientesTableAdapter
             // 
@@ -73,8 +73,8 @@
             this.Name = "Informes";
             this.Text = "Informes";
             this.Load += new System.EventHandler(this.Informes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
