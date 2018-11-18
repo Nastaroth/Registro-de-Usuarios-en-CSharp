@@ -19,11 +19,8 @@ namespace Practica_Telefonos
         {
             InitializeComponent();
         }
-        //public ClientesCls ClienteSeleccionado { get; set; }
-
-        //public ClientesCls ClienteActual { get; set; }
-
-               
+       
+                   
         
         
                 private void btnCancelar_Click(object sender, EventArgs e)
@@ -61,25 +58,7 @@ namespace Practica_Telefonos
 
                 private void btnBuscar_Click(object sender, EventArgs e)
                 {
-                    //Buscar bsc = new Buscar();
-                    //bsc.ShowDialog();
-
-                    //if (bsc.ClienteSeleccionado != null)
-                    //{
-                    //    Int64 id = Convert.ToInt64(txtIdentidad);
-                    //    ClienteSeleccionado = UsuariosCls.ObtenerClientes(id);
-
-                    //    btnModificar.Enabled = true;
-                    //    btnEliminar.Enabled = true;
-                    //    btnRegistrar.Enabled = false;
-                    //    ClienteActual = bsc.ClienteSeleccionado;
-                    //    txtIdentidad.Text = bsc.ClienteSeleccionado.Identidad;
-                    //    txtNombre.Text = bsc.ClienteSeleccionado.Nombre;
-                    //    txtDireccion.Text = bsc.ClienteSeleccionado.Direccion;
-                    //    txtTelefono.Text = bsc.ClienteSeleccionado.Telefono;
-                    //    txtEmail.Text = bsc.ClienteSeleccionado.Email;
-
-                    //}
+                    
 
                     SqlConnection Conex = BasedeDatos.Conexion();
 
@@ -305,9 +284,9 @@ namespace Practica_Telefonos
                 }
 
                 private void txtEmail_TextChanged(object sender, EventArgs e)
+              
                 {
-
-                }
+  }
 
             
                 }

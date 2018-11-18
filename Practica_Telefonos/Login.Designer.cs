@@ -32,6 +32,8 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.cntxtmeLimpiarDatos = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.limpiarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.lblBienvenido = new System.Windows.Forms.Label();
@@ -42,10 +44,8 @@
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cntxtmeLimpiarDatos = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.limpiarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
             this.cntxtmeLimpiarDatos.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -77,6 +77,20 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(212, 24);
             this.txtNombre.TabIndex = 2;
+            // 
+            // cntxtmeLimpiarDatos
+            // 
+            this.cntxtmeLimpiarDatos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.limpiarDatosToolStripMenuItem});
+            this.cntxtmeLimpiarDatos.Name = "cntxtmeLimpiarDatos";
+            this.cntxtmeLimpiarDatos.Size = new System.Drawing.Size(148, 26);
+            // 
+            // limpiarDatosToolStripMenuItem
+            // 
+            this.limpiarDatosToolStripMenuItem.Name = "limpiarDatosToolStripMenuItem";
+            this.limpiarDatosToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.limpiarDatosToolStripMenuItem.Text = "Limpiar Datos";
+            this.limpiarDatosToolStripMenuItem.Click += new System.EventHandler(this.limpiarDatosToolStripMenuItem_Click);
             // 
             // txtContraseña
             // 
@@ -173,24 +187,10 @@
             this.salirToolStripMenuItem1.AutoToolTip = true;
             this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
             this.salirToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.salirToolStripMenuItem1.Text = "Salir";
             this.salirToolStripMenuItem1.ToolTipText = "Quitar la aplicacion";
             this.salirToolStripMenuItem1.Click += new System.EventHandler(this.salirToolStripMenuItem1_Click);
-            // 
-            // cntxtmeLimpiarDatos
-            // 
-            this.cntxtmeLimpiarDatos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.limpiarDatosToolStripMenuItem});
-            this.cntxtmeLimpiarDatos.Name = "cntxtmeLimpiarDatos";
-            this.cntxtmeLimpiarDatos.Size = new System.Drawing.Size(148, 26);
-            // 
-            // limpiarDatosToolStripMenuItem
-            // 
-            this.limpiarDatosToolStripMenuItem.Name = "limpiarDatosToolStripMenuItem";
-            this.limpiarDatosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.limpiarDatosToolStripMenuItem.Text = "Limpiar Datos";
-            this.limpiarDatosToolStripMenuItem.Click += new System.EventHandler(this.limpiarDatosToolStripMenuItem_Click);
             // 
             // Login
             // 
@@ -212,9 +212,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.cntxtmeLimpiarDatos.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.cntxtmeLimpiarDatos.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -17,12 +17,12 @@ namespace Practica_Telefonos
             InitializeComponent();
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            Registrarse reg = new Registrarse();
+        //private void btnRegistrar_Click(object sender, EventArgs e)
+        //{
+        //    Registrarse reg = new Registrarse();
 
-            reg.ShowDialog ();
-        }
+        //    reg.ShowDialog ();
+        //}
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
