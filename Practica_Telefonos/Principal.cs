@@ -288,6 +288,110 @@ namespace Practica_Telefonos
                 {
   }
 
+                private void TstBtnBuscar_Click(object sender, EventArgs e)
+                {
+                    SqlConnection Conex = BasedeDatos.Conexion();
+
+                    string sqlcon = "select * from clientes where Doc_identidad='" + txtIdentidad.Text + "' ";
+
+                    SqlCommand cmd = new SqlCommand(sqlcon, Conex);
+
+
+
+                    SqlDataReader leer = cmd.ExecuteReader();
+
+                    if (leer.Read() == true)
+                    {
+                        txtNombre.Text = leer["Nombre"].ToString();
+                        txtDireccion.Text = leer["Direccion"].ToString();
+                        txtTelefono.Text = leer["Telefono"].ToString();
+                        txtEmail.Text = leer["Email"].ToString();
+                        btnModificar.Enabled = true;
+                        btnEliminar.Enabled = true;
+                        btnRegistrar.Enabled = false;
+
+
+                    }
+
+                    else
+                    {
+                        txtNombre.Text = "";
+                        txtDireccion.Text = "";
+                        txtTelefono.Text = "";
+                        txtEmail.Text = "";
+
+                        MessageBox.Show("Debe introducir el documento de indentificacion");
+
+                    }
+
+                    Conex.Close();
+                }
+
+                private void TstBtnEliminar_Click(object sender, EventArgs e)
+                {
+                    if (txtIdentidad.Text != "")
+                    {
+
+
+                        if (MessageBox.Show("Esta seguro que desea eliminar al cliente?", "Esta Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            btnEliminar.Enabled = false;
+                            btnModificar.Enabled = false;
+                            btnRegistrar.Enabled = true;
+
+                            int resultado = UsuariosCls.eliminar(txtIdentidad.Text);
+
+
+                            if (resultado > 0)
+                            {
+                                MessageBox.Show("Cliente Eliminado con exito", "Cliente Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                limpiar();
+                                btnEliminar.Enabled = false;
+                                btnModificar.Enabled = false;
+                                btnRegistrar.Enabled = true;
+
+                            }
+
+                            else
+                            {
+                                MessageBox.Show("El cliente no pudo ser Eliminado", "Ocurrio un error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            }
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Se cancelo la eliminacion", "Cancelado");
+                        }
+
+
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Introduzca los datos a eliminar", "Ocurrio un error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+                }
+
+                private void TstBtnCancelar_Click(object sender, EventArgs e)
+                {
+
+                    Login lg = new Login();
+                    this.Hide();
+                    lg.ShowDialog();
+                    this.Close();
+                    
+                }
+
+                private void TstBtnInformes_Click(object sender, EventArgs e)
+                {
+                    Informes inf = new Informes();
+                    inf.ShowDialog();
+                }
+
+             
+
             
                 }
             }

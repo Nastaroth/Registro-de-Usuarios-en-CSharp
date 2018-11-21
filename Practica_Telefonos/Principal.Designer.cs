@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblIdentidad = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -40,15 +41,21 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.BtnClientes = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.dataSetClientes1 = new Practica_Telefonos.DataSetClientes();
+            this.BtnClientes = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.TstBtnBuscar = new System.Windows.Forms.ToolStripButton();
+            this.TstBtnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.TstBtnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.TstBtnInformes = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetClientes1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -149,7 +156,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(37, 308);
+            this.btnRegistrar.Location = new System.Drawing.Point(125, 308);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(89, 52);
             this.btnRegistrar.TabIndex = 10;
@@ -157,60 +164,16 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(384, 308);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(89, 52);
-            this.btnBuscar.TabIndex = 11;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(500, 308);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(89, 52);
-            this.btnCancelar.TabIndex = 12;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(266, 308);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(89, 52);
-            this.btnEliminar.TabIndex = 13;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(146, 308);
+            this.btnModificar.Location = new System.Drawing.Point(521, 308);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 52);
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // BtnClientes
-            // 
-            this.BtnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnClientes.Location = new System.Drawing.Point(615, 308);
-            this.BtnClientes.Name = "BtnClientes";
-            this.BtnClientes.Size = new System.Drawing.Size(89, 52);
-            this.BtnClientes.TabIndex = 15;
-            this.BtnClientes.Text = "Informe Clientes";
-            this.BtnClientes.UseVisualStyleBackColor = true;
-            this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
             // errorProvider1
             // 
@@ -221,11 +184,112 @@
             this.dataSetClientes1.DataSetName = "DataSetClientes";
             this.dataSetClientes1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // BtnClientes
+            // 
+            this.BtnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClientes.Image = ((System.Drawing.Image)(resources.GetObject("BtnClientes.Image")));
+            this.BtnClientes.Location = new System.Drawing.Point(264, 308);
+            this.BtnClientes.Name = "BtnClientes";
+            this.BtnClientes.Size = new System.Drawing.Size(26, 31);
+            this.BtnClientes.TabIndex = 15;
+            this.BtnClientes.UseVisualStyleBackColor = true;
+            this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.Location = new System.Drawing.Point(398, 308);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(26, 31);
+            this.btnEliminar.TabIndex = 13;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.Location = new System.Drawing.Point(462, 296);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(26, 31);
+            this.btnCancelar.TabIndex = 12;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(313, 308);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(26, 30);
+            this.btnBuscar.TabIndex = 11;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TstBtnBuscar,
+            this.TstBtnEliminar,
+            this.TstBtnCancelar,
+            this.TstBtnInformes});
+            this.toolStrip1.Location = new System.Drawing.Point(595, 9);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStrip1.Size = new System.Drawing.Size(104, 25);
+            this.toolStrip1.TabIndex = 16;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // TstBtnBuscar
+            // 
+            this.TstBtnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TstBtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("TstBtnBuscar.Image")));
+            this.TstBtnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TstBtnBuscar.Name = "TstBtnBuscar";
+            this.TstBtnBuscar.Size = new System.Drawing.Size(23, 22);
+            this.TstBtnBuscar.Text = "Buscar";
+            this.TstBtnBuscar.Click += new System.EventHandler(this.TstBtnBuscar_Click);
+            // 
+            // TstBtnEliminar
+            // 
+            this.TstBtnEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TstBtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("TstBtnEliminar.Image")));
+            this.TstBtnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TstBtnEliminar.Name = "TstBtnEliminar";
+            this.TstBtnEliminar.Size = new System.Drawing.Size(23, 22);
+            this.TstBtnEliminar.Text = "Eliminar";
+            this.TstBtnEliminar.Click += new System.EventHandler(this.TstBtnEliminar_Click);
+            // 
+            // TstBtnCancelar
+            // 
+            this.TstBtnCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TstBtnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("TstBtnCancelar.Image")));
+            this.TstBtnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TstBtnCancelar.Name = "TstBtnCancelar";
+            this.TstBtnCancelar.Size = new System.Drawing.Size(23, 22);
+            this.TstBtnCancelar.Text = "Cancelar";
+            this.TstBtnCancelar.Click += new System.EventHandler(this.TstBtnCancelar_Click);
+            // 
+            // TstBtnInformes
+            // 
+            this.TstBtnInformes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TstBtnInformes.Image = ((System.Drawing.Image)(resources.GetObject("TstBtnInformes.Image")));
+            this.TstBtnInformes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TstBtnInformes.Name = "TstBtnInformes";
+            this.TstBtnInformes.Size = new System.Drawing.Size(23, 22);
+            this.TstBtnInformes.Text = "Informes";
+            this.TstBtnInformes.Click += new System.EventHandler(this.TstBtnInformes_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 405);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.BtnClientes);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
@@ -248,6 +312,8 @@
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetClientes1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +339,10 @@
         private System.Windows.Forms.Button BtnClientes;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private DataSetClientes dataSetClientes1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton TstBtnBuscar;
+        private System.Windows.Forms.ToolStripButton TstBtnEliminar;
+        private System.Windows.Forms.ToolStripButton TstBtnCancelar;
+        private System.Windows.Forms.ToolStripButton TstBtnInformes;
     }
 }
