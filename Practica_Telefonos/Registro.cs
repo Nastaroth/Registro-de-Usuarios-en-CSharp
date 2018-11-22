@@ -145,6 +145,7 @@ namespace Practica_Telefonos
                         TstModificar.Enabled = true;
                         TstEliminar.Enabled = true;
                         TstRegistrar.Enabled = false;
+                        SlblStatus.Text = "Listo";
 
 
                     }
@@ -185,6 +186,7 @@ namespace Practica_Telefonos
                                 TstEliminar.Enabled = false;
                                 TstModificar.Enabled = false;
                                 TstRegistrar.Enabled = true;
+                                SlblStatus.Text = "Listo";
 
                             }
 
@@ -240,6 +242,10 @@ namespace Practica_Telefonos
                             MessageBox.Show("Cuenta Creada con exito");
 
                             limpiar();
+
+                          
+                            SlblStatus.Text = "Listo";
+                            
                         }
 
                         else
@@ -269,7 +275,7 @@ namespace Practica_Telefonos
                     {
                         MessageBox.Show("Cliente Modificado con exito", "Cliente Modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         limpiar();
-
+                        SlblStatus.Text = "Listo";
                     }
 
                     else
@@ -301,7 +307,7 @@ namespace Practica_Telefonos
                         TstModificar.Enabled = true;
                         TstEliminar.Enabled = true;
                         TstRegistrar.Enabled = false;
-
+                        SlblStatus.Text = "Listo";
 
                     }
 
@@ -341,6 +347,7 @@ namespace Practica_Telefonos
                                 TstEliminar.Enabled = false;
                                 TstModificar.Enabled = false;
                                 TstRegistrar.Enabled = true;
+                                SlblStatus.Text = "Listo";
 
                             }
 
@@ -379,6 +386,8 @@ namespace Practica_Telefonos
                     Informes inf = new Informes();
                     inf.ShowDialog();
                 }
+
+                
 
             
                 }

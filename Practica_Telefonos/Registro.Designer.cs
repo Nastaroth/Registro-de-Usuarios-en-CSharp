@@ -51,6 +51,7 @@
             this.TstModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.TstBuscar = new System.Windows.Forms.ToolStripMenuItem();
             this.TstEliminar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TstSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infromeDeClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,11 +60,13 @@
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TstSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusInformacion = new System.Windows.Forms.StatusStrip();
+            this.SlblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetClientes1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.statusInformacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -258,12 +261,19 @@
             this.TstEliminar.Text = "Eliminar";
             this.TstEliminar.Click += new System.EventHandler(this.eliminarToolStripMenuItem1_Click);
             // 
+            // TstSalir
+            // 
+            this.TstSalir.Name = "TstSalir";
+            this.TstSalir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.TstSalir.Size = new System.Drawing.Size(170, 22);
+            this.TstSalir.Text = "Salir";
+            this.TstSalir.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // informesToolStripMenuItem
             // 
             this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.infromeDeClienteToolStripMenuItem});
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.informesToolStripMenuItem.Text = "Informes";
             // 
@@ -273,7 +283,8 @@
             this.generalToolStripMenuItem,
             this.detalladoToolStripMenuItem});
             this.infromeDeClienteToolStripMenuItem.Name = "infromeDeClienteToolStripMenuItem";
-            this.infromeDeClienteToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.infromeDeClienteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.infromeDeClienteToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.infromeDeClienteToolStripMenuItem.Text = "Infrome de cliente";
             // 
             // generalToolStripMenuItem
@@ -296,7 +307,6 @@
             this.acercaDeToolStripMenuItem,
             this.contactoToolStripMenuItem});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
@@ -318,19 +328,28 @@
             this.contactoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.contactoToolStripMenuItem.Text = "Contacto";
             // 
-            // TstSalir
+            // statusInformacion
             // 
-            this.TstSalir.Name = "TstSalir";
-            this.TstSalir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.TstSalir.Size = new System.Drawing.Size(170, 22);
-            this.TstSalir.Text = "Salir";
-            this.TstSalir.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            this.statusInformacion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SlblStatus});
+            this.statusInformacion.Location = new System.Drawing.Point(0, 383);
+            this.statusInformacion.Name = "statusInformacion";
+            this.statusInformacion.Size = new System.Drawing.Size(750, 22);
+            this.statusInformacion.TabIndex = 18;
+            this.statusInformacion.Text = "statusStrip1";
+            // 
+            // SlblStatus
+            // 
+            this.SlblStatus.Name = "SlblStatus";
+            this.SlblStatus.Size = new System.Drawing.Size(42, 17);
+            this.SlblStatus.Text = "Status:";
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 405);
+            this.Controls.Add(this.statusInformacion);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.txtEmail);
@@ -354,6 +373,8 @@
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusInformacion.ResumeLayout(false);
+            this.statusInformacion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,5 +412,7 @@
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contactoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TstSalir;
+        private System.Windows.Forms.StatusStrip statusInformacion;
+        private System.Windows.Forms.ToolStripStatusLabel SlblStatus;
     }
 }
