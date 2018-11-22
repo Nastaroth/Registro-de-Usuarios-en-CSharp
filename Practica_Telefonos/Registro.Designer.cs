@@ -332,16 +332,20 @@
             // 
             this.statusInformacion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SlblStatus});
-            this.statusInformacion.Location = new System.Drawing.Point(0, 383);
+            this.statusInformacion.Location = new System.Drawing.Point(0, 381);
             this.statusInformacion.Name = "statusInformacion";
-            this.statusInformacion.Size = new System.Drawing.Size(750, 22);
+            this.statusInformacion.Size = new System.Drawing.Size(750, 24);
             this.statusInformacion.TabIndex = 18;
             this.statusInformacion.Text = "statusStrip1";
             // 
             // SlblStatus
             // 
+            this.SlblStatus.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.SlblStatus.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
             this.SlblStatus.Name = "SlblStatus";
-            this.SlblStatus.Size = new System.Drawing.Size(42, 17);
+            this.SlblStatus.Size = new System.Drawing.Size(46, 19);
             this.SlblStatus.Text = "Status:";
             // 
             // Principal
