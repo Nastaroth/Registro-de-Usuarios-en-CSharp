@@ -47,10 +47,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.TstRegistrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TstModificar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TstBuscar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TstEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infromeDeClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +59,7 @@
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TstSalir = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetClientes1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -179,7 +179,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(335, 40);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(66, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(35, 25);
             this.toolStrip1.TabIndex = 16;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -209,54 +209,61 @@
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem,
-            this.registrarToolStripMenuItem,
-            this.editarToolStripMenuItem,
-            this.eliminarToolStripMenuItem,
-            this.eliminarToolStripMenuItem1,
-            this.salirToolStripMenuItem});
+            this.TstRegistrar,
+            this.TstModificar,
+            this.TstBuscar,
+            this.TstEliminar,
+            this.TstSalir});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nuevoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             // 
-            // registrarToolStripMenuItem
+            // TstRegistrar
             // 
-            this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.registrarToolStripMenuItem.Text = "Registrar";
-            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
+            this.TstRegistrar.Name = "TstRegistrar";
+            this.TstRegistrar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.TstRegistrar.Size = new System.Drawing.Size(170, 22);
+            this.TstRegistrar.Text = "Registrar";
+            this.TstRegistrar.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
-            // editarToolStripMenuItem
+            // TstModificar
             // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.editarToolStripMenuItem.Text = "Editar";
-            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
+            this.TstModificar.Name = "TstModificar";
+            this.TstModificar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+            this.TstModificar.Size = new System.Drawing.Size(170, 22);
+            this.TstModificar.Text = "Modificar";
+            this.TstModificar.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
-            // eliminarToolStripMenuItem
+            // TstBuscar
             // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.eliminarToolStripMenuItem.Text = "Buscar";
-            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
+            this.TstBuscar.Name = "TstBuscar";
+            this.TstBuscar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.TstBuscar.Size = new System.Drawing.Size(170, 22);
+            this.TstBuscar.Text = "Buscar";
+            this.TstBuscar.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
-            // eliminarToolStripMenuItem1
+            // TstEliminar
             // 
-            this.eliminarToolStripMenuItem1.Name = "eliminarToolStripMenuItem1";
-            this.eliminarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.eliminarToolStripMenuItem1.Text = "Eliminar";
-            this.eliminarToolStripMenuItem1.Click += new System.EventHandler(this.eliminarToolStripMenuItem1_Click);
+            this.TstEliminar.Name = "TstEliminar";
+            this.TstEliminar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.TstEliminar.Size = new System.Drawing.Size(170, 22);
+            this.TstEliminar.Text = "Eliminar";
+            this.TstEliminar.Click += new System.EventHandler(this.eliminarToolStripMenuItem1_Click);
             // 
             // informesToolStripMenuItem
             // 
             this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.infromeDeClienteToolStripMenuItem});
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
+            this.informesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.informesToolStripMenuItem.Text = "Informes";
             // 
@@ -289,6 +296,7 @@
             this.acercaDeToolStripMenuItem,
             this.contactoToolStripMenuItem});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
@@ -310,12 +318,13 @@
             this.contactoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.contactoToolStripMenuItem.Text = "Contacto";
             // 
-            // salirToolStripMenuItem
+            // TstSalir
             // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            this.TstSalir.Name = "TstSalir";
+            this.TstSalir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.TstSalir.Size = new System.Drawing.Size(170, 22);
+            this.TstSalir.Text = "Salir";
+            this.TstSalir.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -369,10 +378,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem TstRegistrar;
+        private System.Windows.Forms.ToolStripMenuItem TstModificar;
+        private System.Windows.Forms.ToolStripMenuItem TstBuscar;
+        private System.Windows.Forms.ToolStripMenuItem TstEliminar;
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infromeDeClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generalToolStripMenuItem;
@@ -381,6 +390,6 @@
         private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contactoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TstSalir;
     }
 }

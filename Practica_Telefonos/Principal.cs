@@ -23,171 +23,7 @@ namespace Practica_Telefonos
                    
         
         
-                private void btnCancelar_Click(object sender, EventArgs e)
-                {
-
-                    Login lg = new Login();
-                    this.Hide();
-                    lg.ShowDialog();
-                    this.Close();
-                    
-                }
-
-            
-        
-                private void btnRegistrar_Click(object sender, EventArgs e)
-                {
-                    if (txtNombre.Text !="")
-                    {
-                        if (UsuariosCls.RegistrarClientes (txtIdentidad.Text, txtNombre.Text,txtDireccion.Text,txtTelefono.Text,txtEmail.Text) > 0)
-                        {
-                            MessageBox.Show("Cuenta Creada con exito");
-
-                            limpiar();
-                        }
-
-                        else
-                        {
-                            MessageBox.Show("No se pudo crear la cuenta");
-                        }
-
-                    }
-                }
-
-
-
-                private void btnBuscar_Click(object sender, EventArgs e)
-                {
-                    
-
-                    SqlConnection Conex = BasedeDatos.Conexion();
-
-                    string sqlcon = "select * from clientes where Doc_identidad='" + txtIdentidad.Text + "' ";
-                   
-                    SqlCommand cmd = new SqlCommand(sqlcon, Conex);
-                    
-                    
-
-                    SqlDataReader leer = cmd.ExecuteReader();
-
-                    if (leer.Read() == true)
-
-                    {
-                        txtNombre.Text = leer["Nombre"].ToString();
-                        txtDireccion.Text = leer["Direccion"].ToString();
-                        txtTelefono.Text = leer["Telefono"].ToString();
-                        txtEmail.Text = leer["Email"].ToString();
-                        btnModificar.Enabled = true;
-                        btnEliminar.Enabled = true;
-                        btnRegistrar.Enabled = false;
-
-
-                    }
-
-                    else
-                    {
-                        txtNombre.Text = "";
-                        txtDireccion.Text = "";
-                        txtTelefono.Text = "";
-                        txtEmail.Text = "";
-
-                        MessageBox.Show("Debe introducir el documento de indentificacion");
-
-                    }
-
-                    Conex.Close();
-
-                    
-
-                }
-                    
-                    
-                      
-
-                        
-                    
-
-
-
-                private void btnModificar_Click(object sender, EventArgs e)
-                {
-                    ClientesCls pClientes = new ClientesCls();
-                    btnEliminar.Enabled = false;
-                    btnModificar.Enabled = false;
-                    btnRegistrar.Enabled = true;
-                
-                    pClientes.Nombre = txtNombre.Text;
-                    pClientes.Direccion = txtDireccion.Text;
-                    pClientes.Telefono = txtTelefono.Text;
-                    pClientes.Email = txtEmail.Text;
-                    pClientes.Identidad = txtIdentidad.Text;
-
-                    int resultado = UsuariosCls.Modificar(pClientes);
-
-                            if (resultado > 0)
-
-                            {
-                                MessageBox.Show("Cliente Modificado con exito", "Cliente Modificado", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                                limpiar();
-
-                            }
-
-                            else
-                            {
-                                MessageBox.Show("El cliente no pudo ser modificado con exito", "Ocurrio un error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            }
-
-                        }
-
-                private void btnEliminar_Click(object sender, EventArgs e)
-                {
-                    if (txtIdentidad.Text != "")
-                    {
-               
-
-                            if (MessageBox.Show("Esta seguro que desea eliminar al cliente?", "Esta Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                            {
-                                btnEliminar.Enabled = false;
-                                btnModificar.Enabled = false;
-                                btnRegistrar.Enabled = true;
-
-                                int resultado = UsuariosCls.eliminar(txtIdentidad.Text);
-
-
-                                    if (resultado > 0)
-                                    {
-                                        MessageBox.Show("Cliente Eliminado con exito", "Cliente Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                        limpiar();
-                                        btnEliminar.Enabled = false;
-                                        btnModificar.Enabled = false;
-                                        btnRegistrar.Enabled = true;
-
-                                    }
-
-                                    else
-                                    {
-                                        MessageBox.Show("El cliente no pudo ser Eliminado", "Ocurrio un error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                                    }
-                      }
-
-                                    else
-                                    {
-                                        MessageBox.Show("Se cancelo la eliminacion", "Cancelado");
-                                    }
-
-
-                     }
-
-                                    else
-                                    {
-                                        MessageBox.Show("Introduzca los datos a eliminar", "Ocurrio un error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    }
-
-
-                }
-
-
+              
               //Metodo para Limpiar los campos
 
 
@@ -204,8 +40,8 @@ namespace Practica_Telefonos
                 private void Principal_Load(object sender, EventArgs e)
                 {
 
-                    btnModificar.Enabled = false;
-                    btnEliminar.Enabled = false;
+                    TstModificar.Enabled = false;
+                    TstEliminar.Enabled = false;
 
                  }
 
@@ -306,9 +142,9 @@ namespace Practica_Telefonos
                         txtDireccion.Text = leer["Direccion"].ToString();
                         txtTelefono.Text = leer["Telefono"].ToString();
                         txtEmail.Text = leer["Email"].ToString();
-                        btnModificar.Enabled = true;
-                        btnEliminar.Enabled = true;
-                        btnRegistrar.Enabled = false;
+                        TstModificar.Enabled = true;
+                        TstEliminar.Enabled = true;
+                        TstRegistrar.Enabled = false;
 
 
                     }
@@ -335,9 +171,9 @@ namespace Practica_Telefonos
 
                         if (MessageBox.Show("Esta seguro que desea eliminar al cliente?", "Esta Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-                            btnEliminar.Enabled = false;
-                            btnModificar.Enabled = false;
-                            btnRegistrar.Enabled = true;
+                            TstEliminar.Enabled = false;
+                            TstModificar.Enabled = false;
+                            TstRegistrar.Enabled = true;
 
                             int resultado = UsuariosCls.eliminar(txtIdentidad.Text);
 
@@ -346,9 +182,9 @@ namespace Practica_Telefonos
                             {
                                 MessageBox.Show("Cliente Eliminado con exito", "Cliente Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 limpiar();
-                                btnEliminar.Enabled = false;
-                                btnModificar.Enabled = false;
-                                btnRegistrar.Enabled = true;
+                                TstEliminar.Enabled = false;
+                                TstModificar.Enabled = false;
+                                TstRegistrar.Enabled = true;
 
                             }
 
@@ -417,9 +253,9 @@ namespace Practica_Telefonos
                 private void editarToolStripMenuItem_Click(object sender, EventArgs e)
                 {
                     ClientesCls pClientes = new ClientesCls();
-                    btnEliminar.Enabled = false;
-                    btnModificar.Enabled = false;
-                    btnRegistrar.Enabled = true;
+                    TstEliminar.Enabled = false;
+                    TstModificar.Enabled = false;
+                    TstRegistrar.Enabled = true;
 
                     pClientes.Nombre = txtNombre.Text;
                     pClientes.Direccion = txtDireccion.Text;
@@ -462,9 +298,9 @@ namespace Practica_Telefonos
                         txtDireccion.Text = leer["Direccion"].ToString();
                         txtTelefono.Text = leer["Telefono"].ToString();
                         txtEmail.Text = leer["Email"].ToString();
-                        btnModificar.Enabled = true;
-                        btnEliminar.Enabled = true;
-                        btnRegistrar.Enabled = false;
+                        TstModificar.Enabled = true;
+                        TstEliminar.Enabled = true;
+                        TstRegistrar.Enabled = false;
 
 
                     }
@@ -491,9 +327,9 @@ namespace Practica_Telefonos
 
                         if (MessageBox.Show("Esta seguro que desea eliminar al cliente?", "Esta Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-                            btnEliminar.Enabled = false;
-                            btnModificar.Enabled = false;
-                            btnRegistrar.Enabled = true;
+                            TstEliminar.Enabled = false;
+                            TstModificar.Enabled = false;
+                            TstRegistrar.Enabled = true;
 
                             int resultado = UsuariosCls.eliminar(txtIdentidad.Text);
 
@@ -502,9 +338,9 @@ namespace Practica_Telefonos
                             {
                                 MessageBox.Show("Cliente Eliminado con exito", "Cliente Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 limpiar();
-                                btnEliminar.Enabled = false;
-                                btnModificar.Enabled = false;
-                                btnRegistrar.Enabled = true;
+                                TstEliminar.Enabled = false;
+                                TstModificar.Enabled = false;
+                                TstRegistrar.Enabled = true;
 
                             }
 
