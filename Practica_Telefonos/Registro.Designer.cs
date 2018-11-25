@@ -62,6 +62,7 @@
             this.contactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusInformacion = new System.Windows.Forms.StatusStrip();
             this.SlblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TstRegistroUsuario = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetClientes1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -213,6 +214,7 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem,
             this.TstRegistrar,
+            this.TstRegistroUsuario,
             this.TstModificar,
             this.TstBuscar,
             this.TstEliminar,
@@ -226,22 +228,22 @@
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             this.nuevoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             // 
             // TstRegistrar
             // 
             this.TstRegistrar.Name = "TstRegistrar";
             this.TstRegistrar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.TstRegistrar.Size = new System.Drawing.Size(170, 22);
-            this.TstRegistrar.Text = "Registrar";
+            this.TstRegistrar.Size = new System.Drawing.Size(223, 22);
+            this.TstRegistrar.Text = "Registar Clientes";
             this.TstRegistrar.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // TstModificar
             // 
             this.TstModificar.Name = "TstModificar";
             this.TstModificar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.TstModificar.Size = new System.Drawing.Size(170, 22);
+            this.TstModificar.Size = new System.Drawing.Size(223, 22);
             this.TstModificar.Text = "Modificar";
             this.TstModificar.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
@@ -249,7 +251,7 @@
             // 
             this.TstBuscar.Name = "TstBuscar";
             this.TstBuscar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.TstBuscar.Size = new System.Drawing.Size(170, 22);
+            this.TstBuscar.Size = new System.Drawing.Size(223, 22);
             this.TstBuscar.Text = "Buscar";
             this.TstBuscar.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
@@ -257,7 +259,7 @@
             // 
             this.TstEliminar.Name = "TstEliminar";
             this.TstEliminar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.TstEliminar.Size = new System.Drawing.Size(170, 22);
+            this.TstEliminar.Size = new System.Drawing.Size(223, 22);
             this.TstEliminar.Text = "Eliminar";
             this.TstEliminar.Click += new System.EventHandler(this.eliminarToolStripMenuItem1_Click);
             // 
@@ -265,7 +267,7 @@
             // 
             this.TstSalir.Name = "TstSalir";
             this.TstSalir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.TstSalir.Size = new System.Drawing.Size(170, 22);
+            this.TstSalir.Size = new System.Drawing.Size(223, 22);
             this.TstSalir.Text = "Salir";
             this.TstSalir.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -290,14 +292,14 @@
             // generalToolStripMenuItem
             // 
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.generalToolStripMenuItem.Text = "General";
             this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click);
             // 
             // detalladoToolStripMenuItem
             // 
             this.detalladoToolStripMenuItem.Name = "detalladoToolStripMenuItem";
-            this.detalladoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.detalladoToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.detalladoToolStripMenuItem.Text = "Detallado";
             // 
             // ayudaToolStripMenuItem
@@ -313,19 +315,19 @@
             // manualToolStripMenuItem
             // 
             this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.manualToolStripMenuItem.Text = "Manual";
             // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             // 
             // contactoToolStripMenuItem
             // 
             this.contactoToolStripMenuItem.Name = "contactoToolStripMenuItem";
-            this.contactoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.contactoToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.contactoToolStripMenuItem.Text = "Contacto";
             // 
             // statusInformacion
@@ -347,6 +349,14 @@
             this.SlblStatus.Name = "SlblStatus";
             this.SlblStatus.Size = new System.Drawing.Size(46, 19);
             this.SlblStatus.Text = "Status:";
+            // 
+            // TstRegistroUsuario
+            // 
+            this.TstRegistroUsuario.Name = "TstRegistroUsuario";
+            this.TstRegistroUsuario.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.TstRegistroUsuario.Size = new System.Drawing.Size(223, 22);
+            this.TstRegistroUsuario.Text = "Registro de Usuarios";
+            this.TstRegistroUsuario.Click += new System.EventHandler(this.TstRegistroUsuario_Click);
             // 
             // Principal
             // 
@@ -418,5 +428,6 @@
         private System.Windows.Forms.ToolStripMenuItem TstSalir;
         private System.Windows.Forms.StatusStrip statusInformacion;
         private System.Windows.Forms.ToolStripStatusLabel SlblStatus;
+        private System.Windows.Forms.ToolStripMenuItem TstRegistroUsuario;
     }
 }

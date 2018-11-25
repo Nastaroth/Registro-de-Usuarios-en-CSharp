@@ -387,6 +387,13 @@ namespace Practica_Telefonos
                     inf.ShowDialog();
                 }
 
+                private void TstRegistroUsuario_Click(object sender, EventArgs e)
+                {
+                    Registrarse reg2 = new Registrarse();
+
+                    reg2.ShowDialog();
+                }
+
                 
 
             
