@@ -48,10 +48,14 @@ namespace Practica_Telefonos
 
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
+                ValidarCls.Solonumeros(e);
+            
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
                 
                 {
-                    if (UsuariosCls.Login(txtNombre.Text, txtContraseña.Text) > 0)
+                                 
+
+                        if (UsuariosCls.Login(txtNombre.Text, txtContraseña.Text) > 0)
                     {
                         this.Hide();
                         Principal f = new Principal();
@@ -100,6 +104,21 @@ namespace Practica_Telefonos
                     txtNombre.Text = "";
                     txtContraseña.Text = "";
                    
+                }
+
+                private void txtContraseña_TextChanged(object sender, EventArgs e)
+                {
+
+                }
+
+                private void txtNombre_TextChanged(object sender, EventArgs e)
+                {
+
+                }
+
+                private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+                {
+                    ValidarCls.Sololetras(e);
                 }
 
               

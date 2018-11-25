@@ -394,6 +394,11 @@ namespace Practica_Telefonos
                     reg2.ShowDialog();
                 }
 
+                private void txtIdentidad_TextChanged(object sender, EventArgs e)
+                {
+
+                }
+
                 
 
             

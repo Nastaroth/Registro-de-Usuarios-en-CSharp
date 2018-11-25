@@ -48,6 +48,7 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TstRegistrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TstRegistroUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.TstModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.TstBuscar = new System.Windows.Forms.ToolStripMenuItem();
             this.TstEliminar = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +63,6 @@
             this.contactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusInformacion = new System.Windows.Forms.StatusStrip();
             this.SlblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.TstRegistroUsuario = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetClientes1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -127,6 +127,7 @@
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.Size = new System.Drawing.Size(153, 22);
             this.txtIdentidad.TabIndex = 5;
+            this.txtIdentidad.TextChanged += new System.EventHandler(this.txtIdentidad_TextChanged);
             this.txtIdentidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentidad_KeyPress);
             // 
             // txtNombre
@@ -239,6 +240,14 @@
             this.TstRegistrar.Text = "Registar Clientes";
             this.TstRegistrar.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
+            // TstRegistroUsuario
+            // 
+            this.TstRegistroUsuario.Name = "TstRegistroUsuario";
+            this.TstRegistroUsuario.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.TstRegistroUsuario.Size = new System.Drawing.Size(223, 22);
+            this.TstRegistroUsuario.Text = "Registro de Usuarios";
+            this.TstRegistroUsuario.Click += new System.EventHandler(this.TstRegistroUsuario_Click);
+            // 
             // TstModificar
             // 
             this.TstModificar.Name = "TstModificar";
@@ -349,14 +358,6 @@
             this.SlblStatus.Name = "SlblStatus";
             this.SlblStatus.Size = new System.Drawing.Size(46, 19);
             this.SlblStatus.Text = "Status:";
-            // 
-            // TstRegistroUsuario
-            // 
-            this.TstRegistroUsuario.Name = "TstRegistroUsuario";
-            this.TstRegistroUsuario.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.TstRegistroUsuario.Size = new System.Drawing.Size(223, 22);
-            this.TstRegistroUsuario.Text = "Registro de Usuarios";
-            this.TstRegistroUsuario.Click += new System.EventHandler(this.TstRegistroUsuario_Click);
             // 
             // Principal
             // 
